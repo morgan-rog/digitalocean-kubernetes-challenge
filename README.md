@@ -42,16 +42,20 @@ Now we can set up the configuration files for our MongoDB cluster!
 ## The files
 1. ConfigMap -> mongo-config.yaml
     * this file is our ConfigMap which will be our MongoDB Endpoint 
+
 ![mongo-config-yaml](/screenshots/mongo-config-yaml.PNG)
 
 2. Secret -> mongo-secret.yaml
     * this file is where we set up the username and password for the MongoDB
+
 ![mongo-secret-yaml](/screenshots/mongo-secret-yaml.PNG)
 
 3. Deployment and Service -> mongo.yaml
     * this file contains the Deployment and Service configurations for the MongoDB
     * We put the Deployment and Service in 1 file because they belong together
+
 ![mongo-yaml](/screenshots/mongo-yaml.PNG)
+
     * The 'template' is the configuration for the pod and I used the [official](https://hub.docker.com/_/mongo?tab=description&page=1&name=5.0) mongo
     image from dockerhub with the image name of '5.0'
     * The port number needs to be set to '27017'
