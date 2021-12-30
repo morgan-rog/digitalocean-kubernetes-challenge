@@ -56,11 +56,12 @@ Now we can set up the configuration files for our MongoDB cluster!
 
 ![mongo-yaml](/screenshots/mongo-yaml.PNG)
 
-    * The 'template' is the configuration for the pod and I used the [official](https://hub.docker.com/_/mongo?tab=description&page=1&name=5.0) mongo
+* The 'template' is the configuration for the pod and I used the [official](https://hub.docker.com/_/mongo?tab=description&page=1&name=5.0) mongo
     image from dockerhub with the image name of '5.0'
-    * The port number needs to be set to '27017'
-    * The image I used creates both a MongoDB username and password when created so I set
-    those environment variables to the secrets we created in the mongo-secret.yaml file
+* The port number needs to be set to '27017'
+* The image I used creates both a MongoDB username and password when created so I set
+those environment variables to the secrets we created in the mongo-secret.yaml file
+
 ![mongotemplate](/screenshots/mongotemplate.PNG)
 ![mongotemplate-port-and-env-variables](/screenshots/mongotemplate-port-and-env-variables.PNG)
 
