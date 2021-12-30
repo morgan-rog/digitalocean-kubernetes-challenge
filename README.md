@@ -16,9 +16,18 @@ configurations.
 
 ## Creating a K8s Cluster on DigitalOcean
 1. Go to DigitalOcean Dashboard and click 'Kubernetes'
-2. Click the 'Create' button
-3. 
+2. I left Kubernetes version to default
+3. VPC Network set to default
+4. Set 'Node Plan' to 1 GB RAM(2 GB Total)/1vCPU since I used this cluster for the challenge only
+![create-k8-cluster-1](/screenshots/create-k8-cluster-1.PNG)
+5. Named my cluster 'morganrog-kubernetes-challenge'
+![create-k8-cluster-finalize-2](/screenshots/create-k8-cluster-finalize-2.PNG)
+6. Click 'Create Cluster'
+7. Provisioning the K8s cluster takes a few minutes and then we can connect to it using **doctl**
+![create-k8-cluster-provisioning-3](/screenshots/create-k8-cluster-provisioning-3.PNG)
+![provisioned-k8-cluster-digitalocean](/screenshots/provisioned-k8-cluster-digitalocean.PNG)
 
+## Connecting to the K8s cluster we provisioned on DigitalOcean
 
 * Create 4 K8s config files
     * ConfigMap - MongoDB Endpoint
