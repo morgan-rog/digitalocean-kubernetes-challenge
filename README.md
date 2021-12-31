@@ -65,13 +65,30 @@ those environment variables to the secrets we created in the mongo-secret.yaml f
 ![mongotemplate](/screenshots/mongotemplate.PNG)
 ![mongotemplate-port-and-env-variables](/screenshots/mongotemplate-port-and-env-variables.PNG)
 
+## Create MongoDB ConfigMap, Secret, Deployment, and Service
+This is where we run the commands using **kubectl** to apply our MongoDB configurations:
 
+![create-configmap-secret-deployment-service](/screenshots/create-configmap-secret-deployment-service.PNG)
 
-# Deployment and Service in 1 file because they belong together
-# kind - "deployment"
-# template - configuration for Pod
-# Deployment manages Pod
-# Label - you can give any K8s component a label
-# labels are key value pairs that are attached to K8 resources
-# all pods can share the same label
-# Selector - selects pods to forward the request to
+## Use kubectl to see our MongoDB in the K8s cluster
+These are some commands I used to show the MongoDB I deployed in the K8s cluster on
+DigitalOcean.
+
+### Get All Components
+![kubectl-getall-components](/screenshots/kubectl-getall-components.PNG)
+
+### Get ConfigMap and Secret
+![kubectl-get-configmap-and-secret](/screenshots/kubectl-get-configmap-and-secret.PNG)
+
+### Get Node
+![kubectl-getnode](/screenshots/kubectl-getnode.PNG)
+
+### Describe Pod
+![kubectl-describe-pod](/screenshots/kubectl-describe-pod.PNG)
+
+## Thank you!
+Thank you for reading through my process of deploying a MongoDB in a K8s cluster
+that I provisioned on DigitalOcean!
+
+## Credits
+[Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4&list=PLwhlAQL-Q2jl84ANUj_GGK65Vzk9u1WBQ&index=16)
