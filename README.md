@@ -47,6 +47,7 @@ Now we can set up the configuration files for our MongoDB cluster!
 
 2. Secret -> mongo-secret.yaml
     * this file is where we set up the username and password for the MongoDB
+    * The username and password were encoded to Base64 format
 
 ![mongo-secret-yaml](/screenshots/mongo-secret-yaml.PNG)
 
